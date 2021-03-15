@@ -23,14 +23,33 @@
                             <div class="col-sm-6 col-lg-8">
                                 <div class="c-banner__content">
                                     <div class="c-banner__title">Speakers</div>
-      
+
                                     <h2 class="c-banner__subtitle">Streaming on the virtual stage</h2>
                                 </div>
                             </div>
                             <div class="col-sm-6 col-lg-4">
-                                <div class="c-banner__img"><img src="https://s3.amazonaws.com/bizzabo.users.files/rOreXqFRMWGfobactAXL_speaker.png">
+                                <div class="c-banner__img"><img
+                                        src="https://s3.amazonaws.com/bizzabo.users.files/rOreXqFRMWGfobactAXL_speaker.png">
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="c-section c-speaker">
+        <div class="container-fluid">
+            <div class="c-speaker__wrap">
+                <div class="row">
+                    <div class="col-md-6 col-lg-5">
+                        <div class="c-speaker__title">
+
+                            <h1 class="c-section__title">Speaker</h1>
+
+                            <p class="c-par">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique id massa
+                                id iaculis viverra gravida.</p>
                         </div>
                     </div>
                 </div>
@@ -273,7 +292,7 @@
             </div>
         </div>
     </div>
-    
+
 </body>
 
 </html>
@@ -290,28 +309,28 @@
     // Footer accordion
     // On DOM ready,
     $(function () {
-      // Cache selectors
-      var $accordion = $(".js-footer-footer-accordion");
-      var $allPanels = $(
-        ".footer-accordion-item:not(.footer-newsletter-block) .footer-accordion-panel"
-      ).hide();
-      var $allItems = $(".footer-accordion-item");
-  
-      // Event listeners
-      $accordion.on("click", ".footer-accordion-toggle", function () {
-        // Toggle the current accordion panel and close others
-        $allPanels.slideUp();
-        $allItems.removeClass("is-open");
-        if ($(this).next().is(":visible")) {
-          $(".footer-accordion-panel:not(.footer-newsletter-panel)").slideUp();
-        } else {
-          $(this)
-            .next()
-            .slideDown()
-            .closest(".footer-accordion-item")
-            .addClass("is-open");
-        }
-        return false;
-      });
+        // Cache selectors
+        var $accordion = $(".js-footer-footer-accordion");
+        var $allPanels = $(
+            ".footer-accordion-item:not(.footer-newsletter-block) .footer-accordion-panel"
+        ).hide();
+        var $allItems = $(".footer-accordion-item");
+
+        // Event listeners
+        $accordion.on("click", ".footer-accordion-toggle", function () {
+            // Toggle the current accordion panel and close others
+            $allPanels.slideUp();
+            $allItems.removeClass("is-open");
+            if ($(this).next().is(":visible")) {
+                $(".footer-accordion-panel:not(.footer-newsletter-panel)").slideUp();
+            } else {
+                $(this)
+                    .next()
+                    .slideDown()
+                    .closest(".footer-accordion-item")
+                    .addClass("is-open");
+            }
+            return false;
+        });
     });
-  </script>
+</script>

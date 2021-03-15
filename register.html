@@ -13,23 +13,48 @@
     <link rel="stylesheet" href="scss/style.css">
 </head>
 
-<body class="trade-template">
+<body class="trade-template page-internal">
     <div class="c-banner bg-white">
         <div class="c-container">
             <div class="row d-flex justify-content-center">
                 <div class="col-lg-10">
                     <div class="c-banner__wrap">
-                        <div class="row">
+                        <div class="row d-flex">
                             <div class="col-sm-6 col-lg-8">
                                 <div class="c-banner__content">
                                     <div class="c-banner__title">Registration</div>
-      
                                     <h2 class="c-banner__subtitle">Lorem Ipsum</h2>
                                 </div>
                             </div>
-                            <div class="col-sm-6 col-lg-4">
-                                <div class="c-banner__img"><img src="https://s3.amazonaws.com/bizzabo.users.files/bbXewHwUT5yP3Xh52qqr_reg.png">
-                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="c-banner__img"><img
+                src="https://s3.amazonaws.com/bizzabo.users.files/bbXewHwUT5yP3Xh52qqr_reg.png">
+        </div>
+    </div>
+
+    <div class="c-content c-section c-block-01">
+        <div class="c-container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-10">
+                    <div class="c-content__wrap">
+                        <div class="row">
+                            <div class="col-md-10">
+                                <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-8">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit blandit donec
+                                    tempor sed felis orci integer. Sit ultrices cursus vel lorem integer cursus.
+                                    Diam et lectus rhoncus proin. Nec diam tempus amet sagittis mauris morbi eu sem
+                                    sit. Pellentesque semper a viverra urna feugiat. Ornare eu quis ornare augue sed
+                                    mattis. Ut et, amet pellentesque pellentesque massa est odio. Dictum nisi,
+                                    dictum euismod nibh. Ut eu diam eu ipsum orci varius sed. Accumsan, laoreet ac
+                                    eu massa feugiat cursus vel elit vitae. Massa massa erat nibh interdum cras.</p>
                             </div>
                         </div>
                     </div>
@@ -273,7 +298,25 @@
             </div>
         </div>
     </div>
-    
+
+    <div class="c-content c-section pt-0">
+        <div class="c-container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-10">
+                    <div class="c-content__wrap">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit blandit donec
+                        tempor sed felis orci integer. Sit ultrices cursus vel lorem integer cursus.
+                        Diam et lectus rhoncus proin. Nec diam tempus amet sagittis mauris morbi eu sem
+                        sit. Pellentesque semper a viverra urna feugiat. Ornare eu quis ornare augue sed
+                        mattis. Ut et, amet pellentesque pellentesque massa est odio. Dictum nisi,
+                        dictum euismod nibh. Ut eu diam eu ipsum orci varius sed. Accumsan, laoreet ac
+                        eu massa feugiat cursus vel elit vitae. Massa massa erat nibh interdum cras.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>
@@ -290,28 +333,28 @@
     // Footer accordion
     // On DOM ready,
     $(function () {
-      // Cache selectors
-      var $accordion = $(".js-footer-footer-accordion");
-      var $allPanels = $(
-        ".footer-accordion-item:not(.footer-newsletter-block) .footer-accordion-panel"
-      ).hide();
-      var $allItems = $(".footer-accordion-item");
-  
-      // Event listeners
-      $accordion.on("click", ".footer-accordion-toggle", function () {
-        // Toggle the current accordion panel and close others
-        $allPanels.slideUp();
-        $allItems.removeClass("is-open");
-        if ($(this).next().is(":visible")) {
-          $(".footer-accordion-panel:not(.footer-newsletter-panel)").slideUp();
-        } else {
-          $(this)
-            .next()
-            .slideDown()
-            .closest(".footer-accordion-item")
-            .addClass("is-open");
-        }
-        return false;
-      });
+        // Cache selectors
+        var $accordion = $(".js-footer-footer-accordion");
+        var $allPanels = $(
+            ".footer-accordion-item:not(.footer-newsletter-block) .footer-accordion-panel"
+        ).hide();
+        var $allItems = $(".footer-accordion-item");
+
+        // Event listeners
+        $accordion.on("click", ".footer-accordion-toggle", function () {
+            // Toggle the current accordion panel and close others
+            $allPanels.slideUp();
+            $allItems.removeClass("is-open");
+            if ($(this).next().is(":visible")) {
+                $(".footer-accordion-panel:not(.footer-newsletter-panel)").slideUp();
+            } else {
+                $(this)
+                    .next()
+                    .slideDown()
+                    .closest(".footer-accordion-item")
+                    .addClass("is-open");
+            }
+            return false;
+        });
     });
-  </script>
+</script>
